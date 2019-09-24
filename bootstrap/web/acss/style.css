@@ -1,0 +1,84 @@
+.header{background-color:#3F806C;
+    height: 55px;
+}
+.home{background:#3F806C; }
+
+a button:hover{background-color:yellowgreen;}
+
+.pt-15{padding-top: 60px;}
+.pl-15{padding-left: 50px;}
+
+.menu ul li a{
+    color:#2B6B58;
+}
+
+.menu ul li a:hover{
+    color:#e0a800;
+}
+.icon:hover{background-color: gray;}
+
+.footer{background-color: rgba(0, 0, 0, 0.78);
+}
+.small-footer{background-color: black;
+    height: 30px;
+}
+
+
+.slider-section{
+    height: 400px;
+    background-color:#3F806C;
+    margin-bottom: 10px;
+}
+
+.icon{
+    height: 100px;
+    width: 100px;
+    background-color:#e0a800;
+    border-radius: 60px;
+    float: left;
+}
+
+.pl-80{padding-left: 220px;}
+
+.icon:hover{background-color: dimgray;
+}
+
+.text{
+    color: rgba(0, 0, 0, 0.51);
+}
+
+.sidebar{
+   min-height:600px;
+    background-color: #3F806C;}
+
+
+.ml-30{margin-left: 120px;}
+.ml-100{margin-left: 100px;}
+.pl-10{padding-left: 68px;}
+.pl-100{padding-left: 85px;}
+
+
+
+
+.login{
+    height: 50px;
+    background-color: #3F806C;
+}
+
+.img-responsive{
+    height: 220px;
+    width: 170px;
+}
+
+
+.job{
+    color:#3F806C;}
+
+
+.scroll-top{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    display: none;
+}
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>PrimeFaces</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                        <h3 class="pb-3 text-center"> Salesman Details</h3>
+                         
+                        <br/>
+                        <table class="table">
+
+                            <c:forEach var="l" items="#{sale.show()}">
+
+                                    <tr>
+                                        <td>
+                                            <p:outputLabel value="#{l.id}"></p:outputLabel>  
+                                        </td>
+                                        
+                                        <td>
+                                            <p:outputLabel value="#{l.username}"></p:outputLabel>  
+                                        </td>
+                                        
+                                        <td>
+                                            <p:outputLabel value="#{l.name}"></p:outputLabel>
+                                        </td>
+                                        
+                                        <td>
+                                            <p:outputLabel value="#{l.password}"></p:outputLabel>
+                                            
+                                        </td>
+                                        
+                                        <td>
+                                            <p:outputLabel value="#{l.phone}"></p:outputLabel>
+                                        </td>
+                                        
+                                        <td>
+                                            <p:outputLabel value="#{l.address}"></p:outputLabel>
+                                        </td>
+                                        
+                                        <td>
+                                            <p:outputLabel value="#{l.gender}"></p:outputLabel>
+                                        </td>
+                                        
+                                        <td>
+                                            <p:outputLabel value="#{l.date}"></p:outputLabel>
+                                        </td>
+
+                                        <td>
+                                            <h:form>
+                                                <p:commandButton action="#{sale.edit(l)}" value= "Edit"/>   
+                                            </h:form>
+                                           
+                                        </td>
+                                        
+                                        <td>
+                                            <h:form>
+                                                
+                                                <p:commandButton action="#{sale.delete(l)}" value= "Delete"/>    
+                                            </h:form>
+                                           
+                                        </td>
+
+                                    </tr>
+                                </c:forEach>
+                            </table>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </h:body>
+
+    </f:view>
+</html>

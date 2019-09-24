@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>edti salesman</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="row" style="background-color: #afd7ea">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 mb-3 " >
+                    <h2 class="text-center" >Edit Salesman Information</h2>
+                    <hr/>
+                    <h:form>
+                        <div class="form-group">
+                                    <label for="FormControlInput1"></label>
+                                    <p:inputText type="hidden" class="form-control" id="FormControlInput1" placeholder="Write Your id" value="#{beaanControl.salesman.id}"/>                           
+                                   
+                        </div>                          
+
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <p:inputText type="text" class="form-control" id="name" placeholder="Enter Salesman name"   value="#{beaanControl.salesman.name}"/>                           
+
+                    </div> 
+
+
+                    <div class="form-group">
+                        <label for="uname">UserName:</label>
+                        <p:inputText type="text" class="form-control" id="uname" placeholder="Enter user name"   value="#{beaanControl.salesman.username}"/>                            
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <p:inputText type="password" class="form-control" id="password" placeholder="Enter Password" value="#{beaanControl.salesman.password}"/>                            
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="mobile">Phone No:</label>
+                        <p:inputText type="text" class="form-control" id="mobile" placeholder="Enter phone number"   value="#{beaanControl.salesman.phone}"/>                            
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <p:inputText type="text" class="form-control" id="address" placeholder="Enter Address"  value="#{beaanControl.salesman.address}"/>                            
+                    </div> 
+
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <p:selectOneMenu id="gender" value="#{beaanControl.salesman.gender}" style="width:100%">
+                            <f:selectItem itemLabel="Male" itemValue="Male" />
+                            <f:selectItem itemLabel="Female" itemValue="Female" />
+                        </p:selectOneMenu>
+                    </div> 
+                         
+                       
+                        Joining Date: <p:calendar pattern="dd/MM/yyyy"  value="#{beaanControl.salesman.date}"/>                            
+                    
+                    
+                        <p:commandButton value="Update" class="btn btn-info mt-4" action="#{beaanControl.update()}"/>
+                    </h:form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            
+        </div>
+       
+    </h:body>
+</html>
+

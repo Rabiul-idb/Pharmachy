@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view>
+        <h:head>
+            <title>Admin Login Page</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+        </h:head>
+        <h:body>
+            <div class="container">
+                <div class="row"  style="background-image: url('img/bg-01.jpg');">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        
+                            <div class="pt-5 pb-5" >
+                                <img src="img/image.png" class="card-img-top" alt="..."/>
+
+                                <h2 class="text-center text-white">Admin Login Form</h2>
+                                <hr/>
+                                <h:form>
+                                <div class="form-group">
+                                    <label for="username" class="text-white">UserName:</label>
+                                    <p:inputText id="username" class="form-control" value="#{beaanControl.adminLogin.username}"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-white">Password:</label>
+                                    <p:inputText id="password" class="form-control" value="#{beaanControl.adminLogin.password}"/>
+                                </div>
+                                
+                                    <p:commandButton action="#{beaanControl.loginAdd()}" value= "submit" class="btn btn-success mt-3 form-control"/> 
+                                </h:form>
+                            </div>
+                        
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+
+                <div class="row pt-4" style="background-color: #d9e3e1">
+                    <div class="col-md-3">
+                        <div class="">
+                            <h5>About United</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div >
+                            <div class="widget">
+                                <h5>Information</h5>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Laboratory</a></li>
+                                    <li><a href="#">Medical treatment</a></li>
+                                    <li><a href="#">Terms and conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div >
+                            <h5>United center</h5>
+                            <p>
+                                Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
+                            </p>
+                            <ul>
+                                <li>
+
+                                    Saturday-Thursday,8am-10pm
+                                </li>
+                                <li>
+
+                                    +02 0888 904 711
+                                </li>
+                                <li>
+
+                                    rabiul.idb40@gmail.com
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div >
+                            <div >
+                                <h5>Our location</h5>
+                                <p>The Suithouse V303, Kuningan City, Jakarta Indonesia 12940</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:body>
+    </f:view>
+
+</html>
+
